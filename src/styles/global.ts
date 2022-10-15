@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
 
   a{
     text-decoration: none;
+    color: inherit
   }
 
   body, input, textarea, select, bottom {
@@ -31,4 +32,6 @@ export const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+
 `;
