@@ -41,15 +41,7 @@ export const Navigation = styled.div`
     font-size: 1rem;
   }
 
-  a {
-    transition: 0.5s;
-  }
-
   a:nth-child(2) {
     margin-left: 3rem;
-  }
-
-  a:hover {
-    filter: brightness(0.8);
   }
 `;

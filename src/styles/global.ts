@@ -16,7 +16,12 @@ export const GlobalStyles = createGlobalStyle`
 
   a{
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    transition: 0.5s;
+  }
+
+  a:hover {
+    filter: brightness(0.8);
   }
 
   body, input, textarea, select, bottom {

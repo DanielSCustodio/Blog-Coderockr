@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
           <Link href="/posts">
             <a>Posts</a>
           </Link>
-          <Link href="#">
+          <Link href="/contact">
             <a>Contact</a>
           </Link>
         </nav>
