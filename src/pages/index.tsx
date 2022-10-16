@@ -1,9 +1,10 @@
 import { GetStaticProps } from 'next';
+import parse from 'html-react-parser';
 import Link from 'next/link';
 import React from 'react';
 import api from '../service/api';
-import { Container } from '../styles/styles';
 import { Post, PostProps } from '../interface/pots';
+import styles from '../styles/home.module.sass';
 
 export default function Index({ posts }: PostProps) {
   const [list, setList] = React.useState([]);
@@ -24,22 +25,26 @@ export default function Index({ posts }: PostProps) {
   }, []);
 
   return (
-    <Container>
+    <div className={styles.container}>
       {list &&
         list.map((item: Post) => (
           <article key={item.id}>
-            <h3>{item.author}</h3>
-            <h2> {item.title}</h2>
             <img src={item.image} />
-            <div></div>
-            <time>{item.date}</time>
-            <Link href={item.id}>
-              <a> &#187;</a>
-            </Link>
+            <div className="content">
+              <h3>{item.author}</h3>
+              <h2> {item.title}</h2>
+              <div>{parse(item.article)}</div>
+              <div>
+                <time>{item.date}</time>
+                <Link href={item.id}>
+                  <a> &#187;</a>
+                </Link>
+              </div>
+            </div>
           </article>
         ))}
       <div id="limit" />
-    </Container>
+    </div>
   );
 }
 
@@ -51,7 +56,7 @@ export const getStaticProps: GetStaticProps = async () => {
       id: post.id,
       author: post.author,
       title: post.title,
-      article: String(post.article.slice(0, 115)),
+      article: post.article.slice(0, 121),
       image: post.imageUrl,
       date: new Date(post.date).toLocaleDateString('en-us', {
         day: '2-digit',

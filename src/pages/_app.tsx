@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
-import { GlobalStyles } from '../styles/global';
+import '../styles/globals.sass';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header />
       <Component {...pageProps} />
-      <GlobalStyles />
     </>
   );
 }
