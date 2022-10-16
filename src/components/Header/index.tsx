@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-
+import styles from './styles.module.sass';
 export default function Header() {
   return (
-    <div>
+    <header className={styles.container}>
       <div>
         <Link href="/">
           <a>
@@ -22,6 +22,6 @@ export default function Header() {
           </Link>
         </nav>
       </div>
-    </div>
+    </header>
   );
 }
