@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from '../components/Header';
+import Header from '../components/Header';
 import { GlobalStyles } from '../styles/global';
 
 function MyApp({ Component, pageProps }) {

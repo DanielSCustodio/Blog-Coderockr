@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Container, Info, Navigation } from './styles';
 
-export const Header: React.FC = () => {
+export default function Header() {
   return (
     <Container>
       <Info>
@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
       </Info>
       <Navigation>
         <nav>
-          <Link href="/posts">
+          <Link href="/">
             <a>Posts</a>
           </Link>
           <Link href="/contact">
@@ -25,4 +25,4 @@ export const Header: React.FC = () => {
       </Navigation>
     </Container>
   );
-};
+}
