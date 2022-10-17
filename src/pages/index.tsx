@@ -29,18 +29,20 @@ export default function Index({ posts }: PostProps) {
       {list &&
         list.map((item: Post) => (
           <article key={item.id}>
-            <img src={item.image} />
-            <div className="content">
+            <img src={item.image} alt={item.title} />
+            <section className="content">
               <h3>{item.author}</h3>
-              <h2> {item.title}</h2>
-              <div>{parse(item.article)}</div>
+              <h2> {parse(item.title)}</h2>
+              <span>{parse(item.article)}</span>
               <div>
-                <time>{item.date}</time>
+                <time>
+                  <b>{item.date}</b>
+                </time>
                 <Link href={item.id}>
                   <a> &#187;</a>
                 </Link>
               </div>
-            </div>
+            </section>
           </article>
         ))}
       <div id="limit" />
@@ -56,7 +58,7 @@ export const getStaticProps: GetStaticProps = async () => {
       id: post.id,
       author: post.author,
       title: post.title,
-      article: post.article.slice(0, 121),
+      article: post.article.slice(0, 121) + '...',
       image: post.imageUrl,
       date: new Date(post.date).toLocaleDateString('en-us', {
         day: '2-digit',
