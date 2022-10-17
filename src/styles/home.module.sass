@@ -5,6 +5,12 @@
   padding-top: 10rem
   display: flex
   flex-wrap: wrap
+
+  @include mobile-small()
+    padding: 10rem 1rem 0
+  
+  @include mobile-larger()
+    padding: 10rem 1rem 0
   
   article:nth-child(6n + 1) 
     @extend %card-small-left
