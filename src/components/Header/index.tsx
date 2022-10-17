@@ -18,7 +18,7 @@ export default function Header() {
         <Link href="/">
           <a>
             <p>Rockr Blog</p>
-            <img src="images/logo.svg" alt="Logo Rockr Blog" />
+            <img src="/images/logo.svg" alt="Logo Rockr Blog" />
           </a>
         </Link>
       </div>
@@ -78,7 +78,7 @@ export default function Header() {
                     placeholder="Hello..."
                   />
                   <button type="submit">
-                    <img src="images/send.png" width="10" />
+                    <img src="/images/send.png" width="10" />
                     Submit
                   </button>
                 </form>
