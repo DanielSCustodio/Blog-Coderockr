@@ -6,26 +6,43 @@
   display: flex
   flex-wrap: wrap
 
+
   @include mobile-small()
     padding: 10rem 1rem 0
+    img
+      z-index: 0
   
   @include mobile-larger()
     padding: 10rem 1rem 0
+    img
+      z-index: 0
   
   article:nth-child(6n + 1) 
     @extend %card-small-left
+    img
+      z-index: 0
 
   article:nth-child(6n + 2) 
     @extend %card-small-left
+    img
+      z-index: 0
     
   article:nth-child(6n + 3) 
     @extend %card-main-left
+    img
+      z-index: 0
 
   article:nth-child(6n + 4) 
     @extend %card-small-right
+    img
+      z-index: 0
 
   article:nth-child(6n + 5) 
     @extend %card-small-right
+    img
+      z-index: 0
   
   article:nth-child(6n + 6) 
     @extend %card-main-right
+    img
+      z-index: 0

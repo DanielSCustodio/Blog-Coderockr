@@ -18,7 +18,7 @@ class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/images/logo.svg" type="image/svg" />
         </Head>
-        <body>
+        <body id="root">
           <Main />
           <NextScript />
         </body>
