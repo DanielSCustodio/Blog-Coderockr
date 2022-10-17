@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
 import parse from 'html-react-parser';
 import Link from 'next/link';
