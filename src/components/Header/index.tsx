@@ -76,8 +76,10 @@ export default function Header() {
                     required
                     placeholder="Hello..."
                   />
-
-                  <button type="submit"> » Submit</button>
+                  <button type="submit">
+                    <img src="images/send.png" width="10" />
+                    Submit
+                  </button>
                 </form>
               </section>
             </section>
