@@ -67,9 +67,15 @@
     align-items: center
     flex-direction: column
 
+    @include mobile-larger()
+      width: 50%
+      height: auto
+    
     @include mobile-small()
       width: 85%
-      height: 50%
+      height: auto
+
+
 
     h2
       color: $primary-color
