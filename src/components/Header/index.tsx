@@ -8,7 +8,7 @@ export default function Header() {
         <Link href="/">
           <a>
             <p>Rockr Blog</p>
-            <img src="images/logo.svg" alt="Rockr Blog" />
+            <img src="images/logo.svg" alt="Logo Rockr Blog" />
           </a>
         </Link>
       </div>

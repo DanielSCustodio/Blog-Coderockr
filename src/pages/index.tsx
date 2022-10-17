@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import Link from 'next/link';
 import React from 'react';
 import api from '../service/api';
-import { Post, PostProps } from '../interface/pots';
+import { Post, PostProps } from '../interface/post';
 import styles from '../styles/home.module.sass';
 
 export default function Index({ posts }: PostProps) {
@@ -38,7 +38,7 @@ export default function Index({ posts }: PostProps) {
                 <time>
                   <b>{item.date}</b>
                 </time>
-                <Link href={item.id}>
+                <Link href={`posts/${item.id}`}>
                   <a> &#187;</a>
                 </Link>
               </div>
