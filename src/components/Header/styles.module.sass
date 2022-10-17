@@ -1,0 +1,131 @@
+@import '../../styles/_variables'
+@import '../../styles/_utilities'
+
+.container
+  background-color: $dark-color
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1)
+  position: fixed
+  width: 100%
+  height: 4rem
+  z-index: 2
+  color: $light-color
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 10rem
+
+  @include mobile-larger()
+    padding: 0 3rem  
+    height: 5rem
+
+  @include mobile-small()
+    padding: 0 2.5rem
+  
+  div:nth-child(1)
+    a 
+      display: flex
+      justify-content: center
+      align-items: center
+
+    @include mobile-small()
+      a
+        font-size: 1.2rem
+  
+  div:nth-child(2)
+    display: flex
+    font-size: 1rem
+
+    button
+      border: 0
+      background: transparent
+      color: $light-color
+      font-size: 1rem
+      margin-left: 3rem
+      transition: .5s
+
+      &:hover
+        color: $primary-color
+        
+
+    @include mobile-small()
+      font-size: 1rem
+
+.modal
+  background-color: #16151586
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  width: 100vw
+
+  section
+    background-color: #fff
+    padding: 1rem
+    height:70%
+    width: 25%
+    display: flex
+    align-items: center
+    flex-direction: column
+
+    @include mobile-small()
+      width: 85%
+      height: 50%
+
+    h2
+      color: $primary-color
+
+    form
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: center
+
+      label, textarea
+        margin-top: 0.5rem
+        width: 100%
+        font-size: 0.8rem
+
+      textarea
+        margin: 0
+        padding: 0.5rem
+        resize: none
+
+      input
+        padding: 0.5rem
+        font-size: 1.3rem
+        border-radius: 4px
+        border: 1px solid $dark-color
+
+      button
+        margin-top: 1.5rem
+        background-color: $dark-color
+        color: $light-color
+        border: 0
+        padding: 0.5rem 1rem
+        transition: .5s
+        font-weight: 700
+        border-radius: 4px
+        display: flex
+        align-items: center
+
+        img
+          margin-right:  2rem
+
+        &:hover
+          background-color: $primary-color
+          color: $dark-color
+    div
+      display: flex
+      width: 100%
+      justify-content: flex-end
+
+      button
+        border: 0
+        background: transparent
+        font-size: 1.5rem
+        transition: .8s
+
+        &:hover
+          color: $primary-color
+    

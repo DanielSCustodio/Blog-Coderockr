@@ -1,0 +1,170 @@
+//Mobile
+@mixin mobile-small()
+  @media(max-width: 720px)
+    @content
+
+@mixin mobile-larger()
+  @media(max-width: 912px)
+    @content
+
+
+  //PLACEHOLDER SELECTOR
+%card-small-left
+  display: flex
+  width: 50%
+
+  img
+    width: 220px
+    height: auto
+    object-fit: cover
+
+  section
+    background-color: $light-color
+    padding: 1rem
+    width: auto
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    h3
+      font-size: 1rem
+    
+    h2
+      font-size: 1.5rem
+      line-height: 1.8rem
+      padding: 1rem 0
+
+    span
+      font-size: 1rem
+    
+    div
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+
+      time
+        margin-top: 0.5rem
+        font-size: 0.6rem
+
+      a
+        font-size: 35px
+  
+  @include mobile-larger()
+      width: 100%
+      margin-bottom: 1rem
+      justify-content: center
+      align-items: center
+
+      img
+        padding: 0.3rem
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin-right: -5rem
+        z-index: 0
+      
+      section
+        padding-left: 5.5rem
+
+  @include mobile-small()
+      width: 100%
+      margin-bottom: 1rem
+      justify-content: center
+      align-items: center
+
+      img
+        padding: 0.3rem
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin-right: -5rem
+        z-index: 0
+      
+      section
+        padding-left: 5.5rem
+
+%card-small-right
+  @extend %card-small-left
+  flex-direction: row-reverse
+
+  @include mobile-larger()
+    img
+      margin-left: -5rem
+      margin-right: 0
+      z-index: 0
+
+    section
+      padding-right: 5.5rem
+      padding-left: 1rem
+
+  @include mobile-small()
+    img
+      margin-left: -5rem
+      margin-right: 0
+      z-index: 0
+
+    section
+      padding-right: 5.5rem
+      padding-left: 1rem
+
+%card-main-left
+  @extend %card-small-left
+  width: 70%
+  padding: 3rem 0
+  margin-left: 30%
+
+  img
+    width: 520px
+    height: 520px
+    z-index: 0
+  
+  section
+    height: auto
+    justify-content: space-evenly
+
+  @include mobile-larger()
+    width: 100%
+    margin: 0
+    justify-content: center
+    align-items: center
+    padding: 0 0 1rem
+
+    img
+      padding: 0.3rem
+      width: 80px
+      height: 80px
+      border-radius: 50%
+      margin-right: -5rem
+      z-index: 0
+    
+    section
+      padding-left: 5.5rem
+      
+  @include mobile-small()
+      width: 100%
+      margin: 0
+      justify-content: center
+      align-items: center
+      padding: 0 0 1rem
+
+
+      img
+        padding: 0.3rem
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin-right: -5rem
+        z-index: 0
+      
+      section
+        padding-left: 5.5rem
+
+%card-main-right
+  @extend %card-main-left
+  margin-left: 0
+
+
+
+
