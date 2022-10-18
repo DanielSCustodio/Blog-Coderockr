@@ -36,12 +36,12 @@ npm install
 * Para executar o projeto em modo de desenvolvimento:
 >  Na raiz do projeto, execute um dos comandos abaixo:
   ```
-  npm start
+  npm rum dev
   ```
   ou 
 
   ```
-  yarn start
+  yarn dev
   ```
 * Build da aplicação:
 > Execute a sequência de comandos abaixo:
