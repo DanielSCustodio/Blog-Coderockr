@@ -36,7 +36,7 @@ npm install
 * Para executar o projeto em modo de desenvolvimento:
 >  Na raiz do projeto, execute um dos comandos abaixo:
   ```
-  npm rum dev
+  npm run dev
   ```
   ou 
 
