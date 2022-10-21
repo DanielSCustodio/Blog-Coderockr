@@ -40,10 +40,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { id } = context.params;
-  const response = await api.get(
+  const { data } = await api.get(
     `https://stormy-shelf-93141.herokuapp.com/articles/${id}`,
   );
-  const data = response.data;
 
   const postSingle = {
     id,
