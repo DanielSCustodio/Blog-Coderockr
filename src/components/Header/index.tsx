@@ -64,7 +64,7 @@ export default function Header() {
                     Phone
                   </label>
                   <input
-                    type="string"
+                    type="tel"
                     name="phone"
                     id="subject"
                     placeholder="Fill your phone"
