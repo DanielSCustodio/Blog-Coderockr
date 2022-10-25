@@ -10,7 +10,7 @@ O blog conta com um formulário de contato funcional e está em produção, voc�
 ## Tecnologias
 
 Front-end:
-> Next.js, React, typescript, SASS
+> Next.js, React, Typescript, SASS
 
 Back-end:
 > Axios
